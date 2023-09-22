@@ -9,11 +9,10 @@ const userSchema = z.object({
         invalid_type_error: 'User last must be a String',
         required_error: 'User last is required'
     }).default("Unknown"),
-    id: z.string({
+    id: z.number({
         invalid_type_error: 'User id must be a Number',
         required_error: 'User id is required'
     }),
-
 })
 
 function validateUser(obj) {
